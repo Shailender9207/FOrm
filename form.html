@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form</title>
+<script>
+	function takevalue() {
+		var fname=document.getElementById('firstname').value;
+		var sname=document.getElementById('secondname').value;
+		var email=document.getElementById("Email").value;
+		var pass=document.getElementById("password").value;
+		var cpass=document.getElementById("confirmpassword").value;
+		
+ 	 if (pass=="") {
+ 	 	alert("Enter password");
+ 	 }
+ 	 else if (cpass=="") {
+ 	 	alert("Enter confirm Password");
+ 	 }
+ 	 else if (pass == cpass) {
+ 	 	console.log("Successfully submitted");
+ 	 	console.log("Your NAME is "+fname+" "+ sname);
+		console.log("Your Email is " + email);
+ 	 }
+ 	 else{
+ 	 	alert("Wrong Password");
+ 	 }
+	}
+</script>
+</head>
+<body style=" padding: 40px; font-size: 20px;">
+	
+<form style="text-align: -webkit-center;">
+	<table>
+		<h1 style="font-size: 40px; font-family: cursive;">Please Fill The Form</h1>
+
+		<tr>	
+			<th><label for="firstname">First Name: </label></th>
+			<th><input type="text" id="firstname"></th>
+		</tr>
+		<tr>
+			<th><label for="secondname">Second Name :</label></th>
+			<th><input type="text" id="secondname"></th>
+	</tr>
+	<tr>
+		<th><label for="Email">E-mail</label></th>
+		<th><input type="text" id="Email"></th>
+	</tr>
+	<tr>
+		<th><label for="password">Password</label></th>
+		<th><input type="password" id="password"></th>
+	</tr>
+	<tr>
+		<th><label for="confirmpassword">Confirm Password </label></th>
+		<th><input type="password" id="confirmpassword"></th>
+	</tr>
+	<tr>
+		<th colspan="2"><button type="button" onclick="takevalue()">SUBMIT</button></th>
+	</tr>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</table>
+</form>
+</body>
+</html>
